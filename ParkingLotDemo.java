@@ -3,10 +3,11 @@ import VehicleType.Motorcycle;
 import VehicleType.Truck;
 import VehicleType.Vehicle;
 import Level.Level;
+import ParkingLot.ParkingLot;
 
 public class ParkingLotDemo {
-    public static void run() {
-        ParkingLot.ParkingLot parkingLot = ParkingLot.ParkingLot.getInstance();
+    public static void main(String args[]) {
+        ParkingLot parkingLot = ParkingLot.getInstance();
         parkingLot.addLevel(new Level(1, 100));
         parkingLot.addLevel(new Level(2, 80));
 
@@ -22,5 +23,7 @@ public class ParkingLotDemo {
 
         // Unpark vehicle
         parkingLot.unparkVehicle(motorcycle);
+        parkingLot.unparkVehicle(truck);
+        parkingLot.unparkVehicle(car);
     }
 }

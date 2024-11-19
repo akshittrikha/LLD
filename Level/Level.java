@@ -18,7 +18,6 @@ public class Level {
 
         int numBikes = (int) (spotsForBikes * capacity);
         int numCars = (int) (spotsForCars * capacity);
-        int numTrucks = capacity - numBikes - numCars;
 
         for (int i = 1; i <= numBikes; i++) {
             parkingSpotList.add(new ParkingSpot(i, VehicleType.MOTORCYCLE));

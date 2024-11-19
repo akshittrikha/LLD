@@ -1,10 +1,16 @@
 package ParkingLot;
 
-public class ParkingLot {
-    private ParkingLot() {}
+import java.util.*;
+import Level.Level;
+import VehicleType.Vehicle;
 
+public class ParkingLot {
     private static ParkingLot instance;
     private final List<Level> levels;
+
+    private ParkingLot() {
+        levels = new ArrayList<>();
+    }
 
     public static synchronized ParkingLot getInstance() {
         if (instance == null)
@@ -31,7 +37,7 @@ public class ParkingLot {
 
     public boolean unparkVehicle(Vehicle vehicle) {
         for (Level level : levels) {
-            if (level.unparkVehicle(vehicle)) {
+            if (level.unParkVehicle(vehicle)) {
                 System.out.println("Vehicle un-parked successfully.");
                 return true;
             }
