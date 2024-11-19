@@ -29,3 +29,29 @@
 2. The Level.Level class represents a level in the parking lot and contains a list of parking spots. It handles parking and unparking of vehicles within the level.
 
 3. The ParkingSpot.ParkingSpot class represents an individual parking spot and tracks the availability and the parked vehicle.
+
+4. The Vehicle class is an abstract base class for different types of vehicles. It is extended by Car, Motorcycle, and Truck classes.
+
+5. The VehicleType enum defines the different types of vehicles supported by the parking lot.
+
+6. Multi-threading is achieved through the use of synchronized keyword on critical sections to ensure thread safety.
+
+7. The Main class demonstrates the usage of the parking lot system.
+
+## Improvements
+
+1. Add functionality to search for a parked vehicle with its license numbers.
+
+2. Add functionality to unpark a vehicle based on its license number.
+
+3. Add intime / outtime and calculate the price.
+
+4. Add the option to add / remove levels and parking spots in each level.
+
+5. Add functionality to check if a particular spot is empty or not
+
+6. Add a driver / manager class.
+
+7. Add functionality to add more types of vehicles.
+
+8. 

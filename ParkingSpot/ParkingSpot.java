@@ -1,52 +1,54 @@
 package ParkingSpot;
 
+import VehicleType.VehicleType;
 import VehicleType.Vehicle;
 
-import java.util.Date;
-import java.util.UUID;
-
 public class ParkingSpot {
-    private UUID id;
-    private Boolean occupied;
-    private Vehicle vehicle;
-    private Date inTime;
+    private final VehicleType vehicleType;
+    private final Integer id;
+    private Vehicle parkedVehicle;
 
-    public ParkingSpot() {
-        this.id = UUID.randomUUID();
+    public ParkingSpot(Integer id, VehicleType vehicleType) {
+        this.id = id;
+        this.vehicleType = vehicleType;
+        this.parkedVehicle = null;
     }
 
-    public UUID getId() {
+    public Boolean isAvailable() {
+        return this.parkedVehicle == null;
+    }
+
+    public VehicleType getVehicleType() {
+        return this.vehicleType;
+    }
+
+    public Integer getId() {
         return this.id;
     }
 
-    //* parks the vehicle
-    public Boolean park(Vehicle vehicle) {
-        if(this.occupied) return false;
-
-        this.occupied = true;
-        this.vehicle = vehicle;
-        this.inTime = new Date();
-
-        return true;
+    public Vehicle getParkedVehicle() {
+        return this.parkedVehicle;
     }
 
-    //* unparks the vehicle
-    public Date unPark() {
-        if(!this.occupied) return null;
+    public synchronized Integer park(Vehicle vehicle) throws Exception {
+        if (!isAvailable()) {
+            throw new Exception("This Parking Spot is already occupied.");
+        } else if (this.vehicleType != vehicle.getType()) {
+            throw new Exception("Invalid Vehicle Type");
+        }
 
-        Date inTime = this.inTime;
+        this.parkedVehicle = vehicle;
 
-        this.occupied = false;
-        this.vehicle = null;
-        this.inTime = null;
-
-        return inTime;
+        return this.id;
     }
 
-    //* returns the vehicle parked at the spot
-    public Vehicle getVehicle() {
-        if(!this.occupied) return null;
+    public synchronized Integer unPark() throws Exception {
+        if (isAvailable()) {
+            throw new Exception("Parking spot is already empty");
+        }
 
-        return this.vehicle;
+        this.parkedVehicle = null;
+
+        return this.id;
     }
 }

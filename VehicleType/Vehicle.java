@@ -8,4 +8,8 @@ public class Vehicle {
         this.licensePlate = licensePlate;
         this.type = type;
     }
+
+    public VehicleType getType() {
+        return this.type;
+    }
 }
