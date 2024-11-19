@@ -5,7 +5,7 @@ import ParkingSpot.ParkingSpot;
 import VehicleType.VehicleType;
 import VehicleType.Vehicle;
 
-class Level {
+public class Level {
     private final Integer floor;
     private final ArrayList<ParkingSpot> parkingSpotList;
 

@@ -54,4 +54,4 @@
 
 7. Add functionality to add more types of vehicles.
 
-8. 
+8. Add functionality to display availability.

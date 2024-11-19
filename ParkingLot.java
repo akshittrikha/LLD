@@ -1,6 +1,6 @@
 package ParkingLot;
 
-class ParkingLot {
+public class ParkingLot {
     private ParkingLot() {}
 
     private static ParkingLot instance;
