@@ -1,0 +1,32 @@
++----------------------------+
+|      Subject               |  <<interface>>
++----------------------------+
+| + attach(o: Observer)      |
+| + detach(o: Observer)      |
+| + notifyObservers()        |
++----------------------------+
+            ▲
+            |
++-----------------------------------------+
+|     WeatherStation                      |  <<concrete Subject>>
++-----------------------------------------+
+| - observers: List<Observer>             |
+| - temperature: float                    |
++-----------------------------------------+
+| + setTemperature(t: float)              |
+| + getTemperature(): float               |
+| + attach(), detach(), notifyObservers() |
++-----------------------------------------+
+
+           +---------------------+
+           |     Observer        |  <<interface>>
+           +---------------------+
+           | + update()          |
+           +---------------------+
+             ▲           ▲
+             |           |
++----------------+   +------------------+
+|  PhoneDisplay  |   |  WindowDisplay   |  <<concrete Observers>>
++----------------+   +------------------+
+| + update()     |   | + update()       |
++----------------+   +------------------+
