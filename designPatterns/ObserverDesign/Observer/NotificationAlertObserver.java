@@ -1,4 +1,4 @@
-package designPatterns.ObserverDesignPattern.Observer;
+package designPatterns.ObserverDesign.Observer;
 
 public interface NotificationAlertObserver {
     public void update();

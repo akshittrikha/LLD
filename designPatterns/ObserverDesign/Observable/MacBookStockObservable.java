@@ -1,4 +1,4 @@
-package designPatterns.ObserverDesignPattern.Observable;
+package designPatterns.ObserverDesign.Observable;
 
 import designPatterns.ObserverDesignPattern.Observer.NotificationAlertObserver;
 

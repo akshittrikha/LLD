@@ -1,11 +1,11 @@
-package designPatterns.ObserverDesignPattern;
+package designPatterns.ObserverDesign;
 
-import designPatterns.ObserverDesignPattern.Observable.MacBookStockObservable;
-import designPatterns.ObserverDesignPattern.Observable.StockObservable;
-import designPatterns.ObserverDesignPattern.Observable.iPhoneStockObservable;
-import designPatterns.ObserverDesignPattern.Observer.EmailNotificationAlert;
-import designPatterns.ObserverDesignPattern.Observer.NotificationAlertObserver;
-import designPatterns.ObserverDesignPattern.Observer.PhoneNotificationAlert;
+import designPatterns.ObserverDesign.Observable.MacBookStockObservable;
+import designPatterns.ObserverDesign.Observable.StockObservable;
+import designPatterns.ObserverDesign.Observable.iPhoneStockObservable;
+import designPatterns.ObserverDesign.Observer.EmailNotificationAlert;
+import designPatterns.ObserverDesign.Observer.NotificationAlertObserver;
+import designPatterns.ObserverDesign.Observer.PhoneNotificationAlert;
 
 public class Main {
     public static void main(String[] args) {

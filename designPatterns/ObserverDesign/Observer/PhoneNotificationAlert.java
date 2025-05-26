@@ -1,6 +1,6 @@
-package designPatterns.ObserverDesignPattern.Observer;
+package designPatterns.ObserverDesign.Observer;
 
-import designPatterns.ObserverDesignPattern.Observable.StockObservable;
+import designPatterns.ObserverDesign.Observable.StockObservable;
 
 public class PhoneNotificationAlert implements NotificationAlertObserver {
     private final String phone;
