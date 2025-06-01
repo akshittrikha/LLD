@@ -1,6 +1,6 @@
 package designPatterns.ObserverDesign.Observable;
 
-import designPatterns.ObserverDesignPattern.Observer.NotificationAlertObserver;
+import designPatterns.ObserverDesign.Observer.NotificationAlertObserver;
 
 import java.util.ArrayList;
 import java.util.List;
